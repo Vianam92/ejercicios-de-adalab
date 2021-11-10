@@ -1,0 +1,21 @@
+body{
+    box-sizing: border-box;
+    width: 100vh;
+    display:flex;
+    flex-direction: column;
+}
+.header{
+    min-height: 20%;
+    border:brown 1px solid;
+}
+.main{
+    min-height: 70%;
+    border:brown 1px solid;
+    height: 400px;
+    flex-grow: 2;
+}
+.footer{
+    min-height: 10%;
+    border:brown 1px solid;
+    order:2;
+}

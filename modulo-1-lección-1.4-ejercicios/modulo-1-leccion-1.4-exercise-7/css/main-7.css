@@ -1,0 +1,88 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.section_principal{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width:100%;
+    max-width:840px;
+}
+.section_one{
+display:flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: flex-start;
+align-items: flex-start;
+width:50%;
+height: 10%;}
+
+.div_left_other{
+    padding-left:10px;
+}
+.div_left_other p{
+    color:#d8d8d8;
+    font-size:13px;
+}
+
+.div_left{
+    width:18%;
+}
+
+.div_left img{
+    width:10vh;
+}
+.section_one h5{
+    height:10%;
+}
+.section_one p{
+    height:10%;
+}
+.boton{
+    border-radius:5px;
+}
+.boton_one{
+    background-color: #d8d8d8;
+    color:white;
+    border:3px solid #d8d8d8;
+    padding:5px;
+}
+.boton_two{
+    border:3px solid #d8d8d8;
+    color:#d8d8d8;
+    padding:5px;
+}
+.section_two{
+    display:flex;
+    flex-direction: row;
+    width:20%;
+    margin:4px;
+    flex-wrap: wrap;
+}
+.estrellita{
+    margin:4px;
+    flex-basis: 2;
+}
+.estrellita img{
+    width:15px;
+}
+.div_right{
+    background-color: #d8d8d8;
+    border-radius: 5px;
+    height:20px;  
+    width:30px;
+}
+.div_right p{
+    text-align: center;
+}
+.section_two_div p{
+    font-weight: 600;
+    font-size: 13px;
+}
+.section_two_div span{
+color:#d8d8d8;
+font-size: 13px;
+}

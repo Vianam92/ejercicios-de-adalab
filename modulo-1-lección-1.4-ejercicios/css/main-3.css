@@ -1,0 +1,14 @@
+nav{
+    height:100px;
+}
+ul{
+    display:flex;
+    list-style-type: none;
+    justify-content: space-around;
+    margin:0 20px 0 20px;
+}
+a{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}

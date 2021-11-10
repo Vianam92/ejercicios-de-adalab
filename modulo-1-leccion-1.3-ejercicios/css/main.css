@@ -1,0 +1,38 @@
+div{
+    width:100px;
+    height:100px;
+}
+.div_none{
+    display:block;
+    background-color:blue;
+}
+
+.div_inline{
+    display:inline;
+    background-color:green;
+}
+.div_inline-block{
+    display:inline-block;
+    background-color:yellow;
+}
+img{
+    width:100px;
+    height:100px;
+}
+.class{
+    width:200px;
+    height:200px;
+}
+.img_div{
+    width:100px;
+    height:100px;
+}
+.img_ejercicio5{
+width:100px;
+height:100px;
+padding:10px;
+border:5px;
+box-sizing: border-box;
+margin:0px auto;
+
+}

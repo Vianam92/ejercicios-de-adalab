@@ -1,0 +1,21 @@
+.sesion_noticias{
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+
+}
+.article{
+    box-sizing: border-box;
+    border:aqua 1px solid;
+    width:50%;
+    padding:0 10px;
+}
+.article_five{
+    order:-1;
+    width:100%;
+}    
+
+
+
+

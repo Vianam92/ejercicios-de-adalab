@@ -1,0 +1,25 @@
+
+    section{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        border:solid 5px black
+    }
+    div{
+        margin-bottom:106px;
+    }
+    .texto_autor{
+        font-size:18px;
+        margin-top: 40px;
+    }
+    h1{
+        font-size:32px;
+        margin-top:32px;
+    }
+    .texto{
+        font-size:18px;
+        margin-top:27px;
+    }
+    a{
+        padding:8px 16px;
+    }

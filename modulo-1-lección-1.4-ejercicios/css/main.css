@@ -1,0 +1,12 @@
+ul{
+    display:flex;
+    width:500px;
+    height:500px;
+    justify-content: flex-start;
+    flex-direction:column;
+}
+li{
+    list-style-type: none;
+    background-color:green;
+    border:orange solid 1px;
+}
