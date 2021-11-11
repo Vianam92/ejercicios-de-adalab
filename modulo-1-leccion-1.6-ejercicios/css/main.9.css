@@ -1,0 +1,41 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+ul{
+    list-style-type: none;
+}
+.header{
+    background-color: aquamarine;
+    
+}
+.nav{
+    background: darkgoldenrod;
+}
+.main{
+    background-color: blueviolet;
+}
+.footer{
+    background-color: coral;
+}
+@media all and (min-width:480px){
+    body{
+    max-width:1000px;
+    display:flex;
+flex-wrap: wrap;
+justify-content: flex-end;
+}
+header{
+    height: 100%;
+    width:50%;
+}
+main, footer{
+    width:50%;
+}  
+}
+@media all and (min-width:1000px){
+    body{
+flex-wrap: nowrap;
+    };
+}
