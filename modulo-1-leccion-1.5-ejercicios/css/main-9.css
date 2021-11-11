@@ -1,25 +1,26 @@
 
-    section{
+    body{
+        border:8px #f2f2f2 solid;
+        border:solid 5px black;
         display:flex;
-        justify-content: center;
-        align-items: center;
-        border:solid 5px black
+        box-sizing: border-box;
     }
     div{
-        margin-bottom:106px;
+        margin-top:106px;
     }
     .texto_autor{
         font-size:18px;
-        margin-top: 40px;
+        margin-bottom: 40px;
     }
     h1{
         font-size:32px;
-        margin-top:32px;
+        margin-bottom:32px;
     }
     .texto{
         font-size:18px;
-        margin-top:27px;
+        margin-bottom:27px;
     }
     a{
         padding:8px 16px;
+        margin-left:16px;
     }

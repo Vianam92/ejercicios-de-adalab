@@ -1,0 +1,124 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    width:100%;
+    max-width: 600px;
+}
+/*cabecera*/
+.header{
+    background-color:#323232;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.header h1{
+    margin-left:10px;
+}
+.header_nav ul{
+    display:flex;
+    list-style-type: none;
+}
+.list a{
+    text-decoration: none;
+    color:white;
+    margin:5px;
+}
+/*contenido principal*/
+.main{
+    display:flex;
+    width:100%;
+}
+.article{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.section_one{
+    width:100%;
+    display:flex;
+    justify-content: space-around;
+    margin:10px;
+}
+.section_one span{
+    font-size: 12px;
+}
+.section_two{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin:10px;
+}
+.section_two h4{
+    margin:5px;
+}
+.section_two p{
+    margin:10px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-stretch: normal;
+    line-height: 1.2;
+}
+/*footer*/
+.footer{
+    display:flex;
+    justify-content: space-around;
+    width:100%;
+    flex-wrap: wrap;
+    border:#b8b8b8 2px solid;
+}
+.footer_div,.list_footer{
+    color:white;
+
+}
+.list_footer{
+    list-style-type: none;
+    display:flex;
+}
+.list_footer a{
+    text-decoration: none;
+    margin:5px;
+}
+.div_principal{
+    position:absolute;
+    background-color:#b8b8b8;
+    width:100%;
+    max-width: 600px;
+    opacity:10;
+    z-index: 1;
+}
+.div_principal_two{
+    background-color: white;
+    width:300px;
+    height:200px;
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    position:absolute;
+    top:150px;
+   
+}
+.div_principal_two p{
+    text-align: center;
+}
+.white{
+    background-color: white;
+  
+    
+}
+.black{
+    background-color: #323232;
+}
+.button{
+    padding:8px;
+    color:#b8b8b8;
+}
