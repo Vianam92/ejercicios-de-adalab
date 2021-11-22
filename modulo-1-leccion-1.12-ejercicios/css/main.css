@@ -1,0 +1,15 @@
+body{
+    border:red solid 2px;
+    height:100vh;
+}
+.popup{
+    width:250px;
+    height:250px;
+    transform:translateY(-1200px);
+    overflow: hidden;
+    box-shadow: 0 0 10px 0;
+    
+}
+body:hover .popup{
+transform:translate(200px,200px);
+}
