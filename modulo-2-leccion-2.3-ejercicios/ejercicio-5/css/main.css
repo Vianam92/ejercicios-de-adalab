@@ -1,0 +1,15 @@
+.success{
+    border:green solid 2px;
+    background-color: greenyellow;
+    color:green;
+}
+.error{
+    border:red solid 2px;
+    background-color: rgb(212, 117, 117);
+    color:red;
+}
+.warning{
+    border:yellow solid 2px;
+    background-color: yellowgreen;
+    color:yellow;
+}
