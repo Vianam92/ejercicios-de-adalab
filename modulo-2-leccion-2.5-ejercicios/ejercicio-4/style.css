@@ -1,0 +1,9 @@
+.yellow{
+    background-color: yellow;
+}
+.red{
+    background-color: red;
+}
+
+/*Escuchar el evento scroll sobre la ventana window.
+Cuando la posición del scroll vertical supere 250 píxeles poner un color de fondo, cuando sea inferior a 250 píxeles poner otro.
