@@ -1,13 +1,13 @@
-'use strict';
 
-const divElement = document.querySelector('.js-background');
+const element = document.querySelector('.js-background');
 
-function getTecla(eve){
-const currentTarget = eve.currentTarget;
-if(currentTarget.key ==='r'){
-  divElement.classList.add('red');
-} else if(currentTarget.key === 'm'){
-  divElement.classList.add('morado');
+function handlergetText(event){
+    const current = event.currentTarget;
+    if(current.key ==='r'){
+        element.classList.add('red');
+    } else if(current.key==='m'){
+        element.classList.add('morado');
+    }
 }
 
-divElement.addEventListener('keyup', getTecla);
+element.addEventListener('click', handlergetText);

@@ -7,15 +7,12 @@ function getInputValue(){
   const inputValue = inputElement.value;
   return inputValue;
 }
-function paintTextHtml(){
-  
+function paintTextHtml(inputValue){
+  textElement.innerHTML = inputValue;
 }
 
-
-textElement.innerHTML = inputValue;
-
-function getValueInput (event){
-  const currentTarget = event.currentTarget;
+function getValueInput (){
+  paintTextHtml(getInputValue());
 }
 
 inputElement.addEventListener('keyup', getValueInput);

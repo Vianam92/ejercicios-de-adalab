@@ -1,103 +1,120 @@
-"use strict"
-
-
-/* 1- Prueba mostrar formulario nuevo bookmark */
-const section = document.querySelector(".js-data-actions");
-section.classList.remove("hidden");
-
-/* 2- Prueba mostrar menu */
-const sectionMenu = document.querySelector(".js-menudropdown");
-sectionMenu.classList.remove("collapsed");
-
-/* 3- Añadir información de los enlaces desde JS
-    3.1 Traer el elemento html
-    3.2 Variable que contenga toda la información del li por cada uno de los enlaces
-    3.3 Añadir esa info con el innerHTML por cada uno de los enlaces
-*/
+"use strict";
+//variables globales
 const listLinks = document.querySelector(".js_datalist");
+const board_data = document.querySelector(".js-data");
+const menuDropdown = document.querySelector(".js-menudropdown");
+const input_search_desc = document.querySelector(".js-input-search");
 
-const url1 = `href="https://books.adalab.es/materiales-del-curso-n/-MdR6Gp68BX20m1pi0z2/modulo-2-programando-la-web/javascript/2_1_intro_a_la_programacion" target="_blank" rel="noopener noreferrer">
-books.adalab.es/materiales-del-curso-n/-MdR6Gp68BX20m1pi0z2/modulo-2-programando-la-web/javascript/2_1_intro_a_la_programacion`;
+/* DIA3.2 Se muestra el menú hamburguesa */
 
-const input1 = `<input type="checkbox" checked name="item_imp_2" id="item_imp_2">`;
+menuDropdown.classList.remove("collapsed");
 
-const description1 = "JS en los materiales de Adalab";
+//Recogiendo el valor del input
 
-const etiqueta1 = `<li class="item__tag">javascript</li><li class="item__tag">HTML</li>`;
+const descrSearchText = input_search_desc.value;
 
-const url2 = `href="https://thesmartcoder.dev/9-awesome-projects-you-can-build-with-vanilla-javascript/" target="_blank">thesmartcoder.dev/9-awesome-projects-you-can-build-with-vanilla-javascript/`;
+//Dia 1, trayendome el contenido de las Listas.
+const bmk_1_url =
+"https://books.adalab.es/materiales-del-curso-n/-MdR6Gp68BX20m1pi0z2/modulo-2-programando-la-web/javascript/2_1_intro_a_la_programacion";
+const bmk_1_desc = "JS en los materiales de Adalab";
+const bmk_1_seen = "checked";
+const bmk_1_tags_1 = "javascript";
+const bmk_1_tags_2 = "html";
 
-const input2 = "checkbox";
+const bmk_2_url =
+"https://thesmartcoder.dev/9-awesome-projects-you-can-build-with-vanilla-javascript/";
+const bmk_2_desc = "Ideas de proyectos JS";
+const bmk_2_seen = "checked";
+const bmk_2_tags_1 = "javascript";
+const bmk_2_tags_2 = "portfolio";
 
-const description2 = "Ideas de proyectos JS";
+const bmk_3_url =
+  "https://books.adalab.es/materiales-del-curso-n/-MdR6Gp68BX20m1pi0z2/modulo-1-html-y-css/1_1_intro_a_la_web";
+const bmk_3_desc = "HTML en los materiales de Adalab";
+const bmk_3_seen = "";
+const bmk_3_tags_1 = "HTML";
+const bmk_3_tags_2 = "CSS";
 
-const etiqueta2 = `<li class="item__tag">javascript</li><li class="item__tag">portfolio</li>`;
+let html = "";
 
-const url3 = `href="https://books.adalab.es/materiales-del-curso-n/-MdR6Gp68BX20m1pi0z2/modulo-1-html-y-css/1_1_intro_a_la_web"
-target="_blank"
-rel="noopener noreferrer"
->books.adalab.es/materiales-del-curso-n/-MdR6Gp68BX20m1pi0z2/modulo-1-html-y-css/1_1_intro_a_la_web`;
+if(bmk_1_desc.includes(descrSearchText)){
 
-const input3 = "checkbox";
-
-const description3 = "HTML en los materiales de Adalab";
-
-const etiqueta3 = `<li class="item__tag">HTML</li>
-<li class="item__tag">CSS</li>`;
-
-const link1 = `<li class="data__listitem"> 
+  html = `<li class="data__listitem"> 
 <article class="data__item">
   <p class="item__url">
-    <a ${url1}>
+    <a href=${bmk_1_url.replace(
+      "https://",
+      ""
+    )} target="_blank" rel="noopener noreferrer">
+    ${bmk_1_url.substring(8)} 
     </a>
   </p>
   <p class="item__seen">
-    ${input1}
+    <input type="checkbox" ${bmk_1_seen} name="item_imp_2" id="item_imp_2">
   </p>
-  <p class="item__desc">${description1}</p>
+  <p class="item__desc">${bmk_1_desc}</p>
   <ul class="item__tags">
-    ${etiqueta1.toLowerCase()}
+    <li class="item__tag">${bmk_1_tags_1.toLowerCase()}</li><li class="item__tag">${bmk_1_tags_2.toLowerCase()}</li>
   </ul>
 </article>
-</li>`;
+</li>`;}
 
-const link2 = `<li class="data__listitem">
+
+if(bmk_2_desc.includes(descrSearchText)){
+  html += `<li class="data__listitem"> 
 <article class="data__item">
   <p class="item__url">
-    <a ${url2}>
-    </a></p>
-  <p class="item__seen">
-    <input type="${input2}" checked name="item_imp_1" id="item_imp_1">
+    <a href=${bmk_2_url} target="_blank" rel="noopener noreferrer">
+      ${bmk_2_url.replace("https://", "")}
+    </a>
   </p>
-  <p class="item__desc">${description2}</p>
+  <p class="item__seen">
+    <input type="checkbox" ${bmk_2_seen} name="item_imp_2" id="item_imp_2">
+  </p>
+  <p class="item__desc">${bmk_2_desc}</p>
   <ul class="item__tags">
-    ${etiqueta2.toLowerCase()}
+    <li class="item__tag">${bmk_2_tags_1.toLowerCase()}</li><li class="item__tag">${bmk_1_tags_2.toLowerCase()}</li>
   </ul>
 </article>
-</li>`;
+</li>`;}
 
-const link3 = `<li class="data__listitem">
+if(bmk_3_desc.includes(descrSearchText)){
+
+  html += `<li class="data__listitem"> 
 <article class="data__item">
   <p class="item__url">
-    <a
-      ${url3}
-    </a
-    >
+    <a href=${bmk_3_url} target="_blank" rel="noopener noreferrer">
+     ${bmk_3_url.slice(8)}
+    </a>
   </p>
   <p class="item__seen">
-    <input type=${input3} name="item_imp_2" id="item_imp_2" />
+    <input type="checkbox" ${bmk_3_seen} name="item_imp_2" id="item_imp_2">
   </p>
-  <p class="item__desc">${description3}</p>
+  <p class="item__desc">${bmk_3_desc}</p>
   <ul class="item__tags">
-    ${etiqueta3.toLowerCase()}
+    <li class="item__tag">${bmk_3_tags_1.toLowerCase()}</li><li class="item__tag">${bmk_3_tags_2.toLowerCase()}</li>
   </ul>
 </article>
-</li>`;
-
-
-let html = link1 + link2 + link3;
+</li>`;}
 
 listLinks.innerHTML = html;
 
+//Validando las categorias
 
-/*Funciones de String*/
+if ((bmk_1_tags_1 === "") & (bmk_1_tags_2 === "")) {
+  html += `<p class='item__tags'>No tiene categorias</p>`;
+};
+
+//Funciones
+
+function displayTable(){
+  if (board_data.classList.contains("tableview")) {
+    board_data.classList.remove("tableview");
+    board_data.classList.add("listview");
+  } else if (board_data.classList.contains("listview")) {
+    board_data.classList.remove("listview");
+    board_data.classList.add("tableview");
+  }
+}
+displayTable();
+
