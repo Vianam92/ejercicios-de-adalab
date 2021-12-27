@@ -1,18 +1,14 @@
+'use strict';
+
 function getDogImage() {
-  fetch("https://dog.ceo/api/breeds/list/all")
+  fetch("https://dog.ceo/api/breed/chihuahua/images/random")
     .then(response => response.json())
     .then(data => {
       const img = document.querySelector("img");
       img.src = data.message;
       img.alt = "Un perro";
+      console.log(data);
     });
 }
 const btn = document.querySelector(".js-dog");
 btn.addEventListener("click", getDogImage);
-
-function getDogChiguagua(){
-  for(const item of data){
-    console.log(data);
-  }
-}
-getDogChiguagua();

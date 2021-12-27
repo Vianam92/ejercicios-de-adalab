@@ -1,18 +1,19 @@
 'use strict';
 
-function getBreedsImage () {
-  fetch('https://dog.ceo/api/breeds/list')
-    .then(breedsResponse => breedsResponse.json())
-    .then(breedsData => {
-      const breeds = breedsData.message;
-      return fetch('https://dog.ceo/api/breed/' + breeds[0] + '/images/random');
-    })
-    .then(imageResponse => imageResponse.json())
-    .then(imageData => {
-      const img = document.querySelector('img');
-      img.src = imageData.message;
-      img.alt = 'Un perro';
-    });
+const inputElement = document.querySelector('.js-input');
+const btnElement = document.querySelector('.js-btn');
+const listElement = document.querySelector('.js-list');
+
+const inputValue = inputElement.value;
+
+const getUrl = () => {
+  fetch(`https://api.github.com/orgs/${inputValue}`)
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+  })
 }
-const btn = document.querySelector('.js-btn');
-btn.addEventListener('click', getBreedsImage);
+
+getUrl();
+
+btnElement.addEventListener('click', getUrl);
