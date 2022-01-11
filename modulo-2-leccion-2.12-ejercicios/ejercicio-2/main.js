@@ -11,17 +11,16 @@ const getValue = () => {
 }
 
 const getImage = () => {
-    newElement.setAttribute('src', '');
-    newElement.setAttribute('class', 'images');
+    newElement.src = "";
+    newElement.className = 'images';
     images.appendChild(newElement);
-
     if(getValue() === 'madrid'){
-        newElement.setAttribute('src', './images/Madrid.jpeg');
+        newElement.src ='./images/Madrid.jpeg';
     }else if(getValue() === 'paris'){
-        newElement.setAttribute('src', './images/Paris.jpeg');
+        newElement.src= './images/Paris.jpeg';
     }
     else if(getValue() === 'new-york'){
-        newElement.setAttribute('src', './images/New_York.jpeg');
+        newElement.src= './images/New_York.jpeg';
     }
 }
 

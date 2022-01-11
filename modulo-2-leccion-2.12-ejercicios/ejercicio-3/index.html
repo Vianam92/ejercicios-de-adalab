@@ -9,14 +9,17 @@
 </head>
 
 <body>
-    <form action="#" method="get">
+    <form action="#" method="get" class="js-form">
         <label for="name">Nombre</label>
-        <input type="text" name="name" id="name">
+        <input type="text" name="name" id="name" class="js-input">
 
-        <label for="last-name">Apellido</label>
-        <input type="text" name="last-name" id="last-name">
+        <label for="lastName">Apellido</label>
+        <input type="text" name="lastName" id="lastName" class="js-input">
         <label for="phone">Teléfono</label>
-        <input type="number" name="phone" id="phone">
+        <input type="number" name="phone" id="phone" class="js-input">
+        <select for="select" class="js-select">
+            <option>Selecciona</option>
+        </select>
     </form>
     <script src="./main.js"></script>
 </body>
